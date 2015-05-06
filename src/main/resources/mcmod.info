@@ -1,0 +1,16 @@
+[
+{
+  "modid": "Redstone-Plate",
+  "name": "Example Mod",
+  "description": "Example placeholder mod.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": [""],
+  "credits": "Copyright ©  2015",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

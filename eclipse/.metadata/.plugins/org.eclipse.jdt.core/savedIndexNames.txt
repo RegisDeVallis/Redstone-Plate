@@ -1,0 +1,1 @@
+INDEX VERSION 1.127+C:\Users\Dalen\Documents\Visual Studio 2013\Projects\Redstone-Plate\Redstone-Plate\eclipse\.metadata\.plugins\org.eclipse.jdt.core

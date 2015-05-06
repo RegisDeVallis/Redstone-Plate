@@ -1,0 +1,3 @@
+C:\Users\Dalen\Documents\Visual Studio 2013\Projects\Redstone-Plate\Redstone-Plate\bin\mods\Redstone-Plate.jar
+C:\Users\Dalen\Documents\Visual Studio 2013\Projects\Redstone-Plate\Redstone-Plate\obj\DebugClient\com\example\examplemod\ExampleMod.class
+C:\Users\Dalen\Documents\Visual Studio 2013\Projects\Redstone-Plate\Redstone-Plate\obj\DebugClient\Redstone-Plate.jar
