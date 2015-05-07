@@ -21,6 +21,9 @@ public class BlockRedstonePlate extends Block {
     setBlockName(RedstonePlate.MODID + "_" + "redstoneplate");
     
     setCreativeTab(CreativeTabs.tabRedstone);
+    
+    //shape
+    this.setBlockBounds(0.0F, 0.0F, 0.0F, 1.0F, 0.125F, 1.0F);
 
     }
 }
