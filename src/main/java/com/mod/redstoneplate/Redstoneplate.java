@@ -13,7 +13,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 public class RedstonePlate
 {
     public static final String MODID = "redstoneplate";
-    public static final String VERSION = "0.0.2";
+    public static final String VERSION = "0.0.4";
     
     //my variables
     public static Block BlockRedstonePlate;

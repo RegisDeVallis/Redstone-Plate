@@ -2,7 +2,7 @@
 {
   "modid": "redstoneplate",
   "name": "Redstone Plate",
-  "description": "Redstone Plate",
+  "description": "Compact Redstone!",
   "version": "${version}",
   "mcversion": "${mcversion}",
   "url": "",
