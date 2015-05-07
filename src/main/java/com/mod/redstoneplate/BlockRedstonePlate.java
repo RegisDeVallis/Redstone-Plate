@@ -17,7 +17,7 @@ public class BlockRedstonePlate extends Block {
     
     setStepSound(Block.soundTypeStone);
     
-    setBlockTextureName(RedstonePlate.MODID + "_" + "redstoneplate");
+    setBlockTextureName(RedstonePlate.MODID + ":" + "redstoneplate");
     setBlockName(RedstonePlate.MODID + "_" + "redstoneplate");
     
     setCreativeTab(CreativeTabs.tabRedstone);
