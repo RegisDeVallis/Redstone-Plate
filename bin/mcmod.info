@@ -1,8 +1,8 @@
 [
 {
-  "modid": "Redstone-Plate",
-  "name": "Example Mod",
-  "description": "Example placeholder mod.",
+  "modid": "redstoneplate",
+  "name": "Redstone Plate",
+  "description": "Redstone Plate",
   "version": "${version}",
   "mcversion": "${mcversion}",
   "url": "",

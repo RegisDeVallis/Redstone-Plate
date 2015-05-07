@@ -12,5 +12,11 @@
 			<arguments/>
 		</buildCommand>
 	</buildSpec>
-	<linkedResources/>
+	<linkedResources>
+		<link>
+			<name>Resources</name>
+			<type>2</type>
+			<location>C:/Users/Dalen/Documents/GitHub/Redstone-Plate/src/main/resources/assets/redstoneplate</location>
+		</link>
+	</linkedResources>
 </projectDescription>
