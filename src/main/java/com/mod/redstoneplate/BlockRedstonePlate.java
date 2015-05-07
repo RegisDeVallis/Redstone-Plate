@@ -10,7 +10,7 @@ public class BlockRedstonePlate extends Block {
 
     public BlockRedstonePlate() {
 
-    super(Material.rock);
+    super(Material.circuits);
     
     setHarvestLevel("pickaxe", 1);
     setHardness(0.5F);
