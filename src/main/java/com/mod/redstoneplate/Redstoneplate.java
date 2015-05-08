@@ -17,22 +17,19 @@ public class RedstonePlate
     
     //my variables
     public static Block BlockRedstonePlate;
+    public static Block BlockRspDWall;
     
     
     @EventHandler
     public void init(FMLInitializationEvent event)
     {
-    	/*craft test
-    	GameRegistry.addRecipe(new ItemStack(Items.diamond), new Object[]{
-        	"XXX",
-        	"XXX",
-        	"XXX",
-        	'X', Blocks.dirt});
-        	*/
-
-    	BlockRedstonePlate = new BlockRedstonePlate();
     	
+    	//block registry
+    	BlockRedstonePlate = new BlockRedstonePlate();
     	GameRegistry.registerBlock(BlockRedstonePlate, "Redstone Plate");
+    	BlockRspDWall = new BlockRspDWall();
+    	GameRegistry.registerBlock(BlockRspDWall, "RspDWall");
+    	
     	
     	GameRegistry.addRecipe(new ItemStack(BlockRedstonePlate, 1), new Object[]{
         	"XYX",
