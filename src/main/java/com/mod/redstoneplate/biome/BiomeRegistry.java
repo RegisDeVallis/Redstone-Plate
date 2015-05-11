@@ -15,14 +15,14 @@ public class BiomeRegistry {
 
 	private static void registerBiome() {
 		
-		BiomeRedstonePlate = new BiomeGenRedstonePlate(137).setBiomeName("Redstone Plate").setTemperatureRainfall(1.2F, 0.9F);
+		biomeRedstonePlate = new biomeGenRedstonePlate(137).setBiomeName("Redstone Plate").setTemperatureRainfall(1.2F, 0.9F);
 		
 	}
 
 	private static void initializedBiome() {
 		// TODO Auto-generated method stub
 		
-		BiomeDictionary.registerBiomeType(BiomeRedstonePlate, Type.FOREST);
+		BiomeDictionary.registerBiomeType(biomeRedstonePlate, Type.DESERT);
 		
 		
 	}

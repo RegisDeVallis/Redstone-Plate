@@ -1,6 +1,6 @@
 package com.mod.redstoneplate.blocks;
 
-import com.mod.redstoneplate.RedstonePlate;
+import com.mod.redstoneplate.main.mainRegistry;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -14,8 +14,8 @@ public class BlockRspDWall extends Block {
 		
 		setStepSound(Block.soundTypeStone);
 		
-		setBlockTextureName(RedstonePlate.MODID + ":" + "RspDWall");
-	    setBlockName(RedstonePlate.MODID + "_" + "RspDWall");
+		setBlockTextureName(mainRegistry.MODID + ":" + "RspDWall");
+	    setBlockName(mainRegistry.MODID + "_" + "RspDWall");
 	    
 	    setCreativeTab(CreativeTabs.tabRedstone);
 	    

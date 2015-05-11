@@ -1,8 +1,7 @@
 
 package com.mod.redstoneplate.blocks;
 
-import com.mod.redstoneplate.RedstonePlate;
-
+import com.mod.redstoneplate.main.*;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
@@ -20,8 +19,8 @@ public class BlockRedstonePlate extends Block {
     
     setStepSound(Block.soundTypeStone);
     
-    setBlockTextureName(RedstonePlate.MODID + ":" + "redstoneplate");
-    setBlockName(RedstonePlate.MODID + "_" + "redstoneplate");
+    setBlockTextureName(mainRegistry.MODID + ":" + "redstoneplate");
+    setBlockName(mainRegistry.MODID + "_" + "redstoneplate");
     
     setCreativeTab(CreativeTabs.tabRedstone);
     
