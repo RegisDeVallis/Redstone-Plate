@@ -1,1 +1,4 @@
 /nbbuild/
+*.classpath
+*.txt
+*.xml
