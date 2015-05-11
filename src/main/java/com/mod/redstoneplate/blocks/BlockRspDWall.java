@@ -1,5 +1,7 @@
 package com.mod.redstoneplate.blocks;
 
+import java.util.Random;
+
 import com.mod.redstoneplate.main.mainRegistry;
 
 import net.minecraft.block.Block;
@@ -12,12 +14,14 @@ public class BlockRspDWall extends Block {
 		
 		super(Material.rock);
 		
-		setStepSound(Block.soundTypeStone);
+		this.setStepSound(Block.soundTypeStone);
 		
-		setBlockTextureName(mainRegistry.MODID + ":" + "RspDWall");
-	    setBlockName(mainRegistry.MODID + "_" + "RspDWall");
+		this.setBlockTextureName(mainRegistry.MODID + ":" + "RspDWall");
+		this.setBlockName(mainRegistry.MODID + "_" + "RspDWall");
 	    
-	    setCreativeTab(CreativeTabs.tabRedstone);
+	    this.setCreativeTab(CreativeTabs.tabRedstone);
+	    
+	    this.setHardness(-1.0F);
 	    
 	  
 	   
@@ -46,6 +50,10 @@ public class BlockRspDWall extends Block {
     public Boolean canBlockGrass()
     {
     	return true;
+    }
+    
+    public int quantityDropped(Random rand){
+    	return 0;
     }
     
 

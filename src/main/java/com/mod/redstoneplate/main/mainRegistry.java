@@ -16,7 +16,7 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 public class mainRegistry
 {
     public static final String MODID = "redstoneplate";
-    public static final String VERSION = "0.0.6";
+    public static final String VERSION = "0.0.7";
     
     
     @EventHandler

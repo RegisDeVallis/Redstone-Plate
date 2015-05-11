@@ -17,12 +17,12 @@ buildscript {
 
 apply plugin: 'forge'
 
-version = "1.7.10-0.0.6"
+version = "1.7.10-0.0.7"
 group= "com.mod.redstoneplate.main" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "redstoneplate"
 
 minecraft {
-    version = "1.7.10-10.13.3.1401-1710ls"
+    version = "1.7.10-10.13.3.1403-1.7.10"
     runDir = "eclipse"
 }
 

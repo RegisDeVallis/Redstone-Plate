@@ -1,31 +1,44 @@
 
 package com.mod.redstoneplate.blocks;
 
+import com.mod.redstoneplate.demension.dimensionRegistry;
+import com.mod.redstoneplate.demension.teleporterRedstonePlate;
 import com.mod.redstoneplate.main.*;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.player.EntityPlayerMP;
+import net.minecraft.item.ItemStack;
+import net.minecraft.server.MinecraftServer;
+import net.minecraft.server.management.ServerConfigurationManager;
+import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.IBlockAccess;
+import net.minecraft.world.World;
 
 
 public class BlockRedstonePlate extends Block {
 
-    public BlockRedstonePlate() {
+	public BlockRedstonePlate() {
 
-    super(Material.circuits);
-    
-    setHarvestLevel("pickaxe", 1);
-    setHardness(0.5F);
-    
-    setStepSound(Block.soundTypeStone);
-    
-    setBlockTextureName(mainRegistry.MODID + ":" + "redstoneplate");
-    setBlockName(mainRegistry.MODID + "_" + "redstoneplate");
-    
-    setCreativeTab(CreativeTabs.tabRedstone);
-    
-    //shape
-    this.setBlockBounds(0.0F, 0.0F, 0.0F, 1.0F, 0.125F, 1.0F);
+	    super(Material.circuits);
+	    
+	    this.setHarvestLevel("pickaxe", 1);
+	    this.setHardness(0.5F);
+	    
+	    this. setStepSound(Block.soundTypeStone);
+	    
+	    this.setBlockTextureName(mainRegistry.MODID + ":" + "redstoneplate");
+	    this.setBlockName(mainRegistry.MODID + "_" + "redstoneplate");
+	    
+	    this.setCreativeTab(CreativeTabs.tabRedstone);
+	    
+	    //shape
+	    this.setBlockBounds(0.0F, 0.0F, 0.0F, 1.0F, 0.125F, 1.0F);
+	    
+	    
 
     }
     
@@ -44,6 +57,14 @@ public class BlockRedstonePlate extends Block {
     public boolean renderAsNormalBlock()
     {
         return false;
+    }
+    
+    /**
+     * Can this block provide power. Only wire currently seems to have this change based on its state.
+     */
+    public boolean canProvidePower()
+    {
+        return true;
     }
     
     /**
@@ -70,6 +91,45 @@ public class BlockRedstonePlate extends Block {
          * Can this block provide power. Only wire currently seems to have this change based on its state.
          */
         return canProvidePower() && side != -1;
+    }
+    
+    /**
+     * Called when the block is placed in the world.
+     */
+    public void onBlockPlacedBy(World world, int x, int y, int z, EntityLivingBase p_149689_5_, ItemStack p_149689_6_) {
+    	
+    	if(world .equals(8) ){
+    	
+    	}
+    	
+    }
+    
+   
+    /**
+     * Called upon block activation (right click on the block.)
+     * @param mcServer 
+     */
+    public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer EPlayer, int metadata, float what, float these, float are, MinecraftServer mcServer)
+    {
+    	TileEntity tileEntity = world.getTileEntity(x, y, z);
+    	
+    	//EntityPlayerMP thePlayer = (EntityPlayerMP) thePlayer;
+    	
+    	if(EPlayer instanceof EntityPlayerMP) {
+    		
+    		MinecraftServer server = MinecraftServer.getServer();
+    		EntityPlayerMP thePlayer = (EntityPlayerMP) EPlayer;
+    		
+	        if (tileEntity == null && EPlayer.isSneaking()) {
+	        	
+	        	thePlayer.mcServer.getConfigurationManager().transferPlayerToDimension(thePlayer, dimensionRegistry.dimensionId, new teleporterRedstonePlate(server.worldServerForDimension(dimensionRegistry.dimensionId)));
+	            
+	        	return true;
+	        }else {
+	        	return false;
+	        }
+    	}
+		return true;
     }
 
 }
