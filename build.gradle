@@ -18,7 +18,7 @@ buildscript {
 apply plugin: 'forge'
 
 version = "1.7.10-0.0.6"
-group= "com.mod.redstoneplate" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+group= "com.mod.redstoneplate.main" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "redstoneplate"
 
 minecraft {

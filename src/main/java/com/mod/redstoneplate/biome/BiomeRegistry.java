@@ -15,7 +15,7 @@ public class BiomeRegistry {
 
 	private static void registerBiome() {
 		
-		biomeRedstonePlate = new biomeGenRedstonePlate(137).setBiomeName("Redstone Plate").setTemperatureRainfall(1.2F, 0.9F);
+		biomeRedstonePlate = new biomeGenRedstonePlate(137).setBiomeName("Redstone Plate").setTemperatureRainfall(1.2F, 0.0F);
 		
 	}
 

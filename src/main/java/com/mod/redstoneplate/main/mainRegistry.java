@@ -1,16 +1,16 @@
 package com.mod.redstoneplate.main;
 
-import com.mod.redstoneplate.blocks.*;
+import net.minecraft.world.WorldType;
 
+import com.mod.redstoneplate.biome.WorldTypeRedstonePlate;
+import com.mod.redstoneplate.blocks.blockRegistry;
+import com.mod.redstoneplate.crafting.craftingRegistry;
+import com.mod.redstoneplate.demension.dimensionRegistry;
 
-import net.minecraft.block.Block;
-import net.minecraft.init.Blocks;
-import net.minecraft.init.Items;
-import net.minecraft.item.ItemStack;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
-import cpw.mods.fml.common.registry.GameRegistry;
+import cpw.mods.fml.common.event.FMLPostInitializationEvent;
  
 @Mod(modid = mainRegistry.MODID, version = mainRegistry.VERSION)
 public class mainRegistry
@@ -18,28 +18,19 @@ public class mainRegistry
     public static final String MODID = "redstoneplate";
     public static final String VERSION = "0.0.6";
     
-    //my variables
-    public static Block BlockRedstonePlate;
-    public static Block BlockRspDWall;
-    
-    
     
     @EventHandler
     public void init(FMLInitializationEvent event)
     {
     	
-    	
     	blockRegistry.blockRegistry();
+    	craftingRegistry.craftingRegistry();
+    	dimensionRegistry.mainRegistry();
     	
-    	//crafting registry
-    	GameRegistry.addRecipe(new ItemStack(BlockRedstonePlate, 1), new Object[]{
-        	"XYX",
-        	"YZY",
-        	"XYX",
-        	'X', Items.iron_ingot , 'Y', Items.redstone , 'Z' , Blocks.stone_slab  });
+    }
+    
+    public void PostLoad(FMLPostInitializationEvent PostEvent) {
     	
-    	
-    	
-    	
+    	WorldType REDSTONEPLATE = new WorldTypeRedstonePlate(3, "Redstone Plate");
     }
 }
