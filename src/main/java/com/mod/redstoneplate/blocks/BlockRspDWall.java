@@ -1,4 +1,6 @@
-package com.mod.redstoneplate;
+package com.mod.redstoneplate.blocks;
+
+import com.mod.redstoneplate.RedstonePlate;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;

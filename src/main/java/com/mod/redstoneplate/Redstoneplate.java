@@ -1,5 +1,8 @@
 package com.mod.redstoneplate;
 
+import com.mod.redstoneplate.blocks.*;
+
+
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
@@ -13,16 +16,18 @@ import cpw.mods.fml.common.registry.GameRegistry;
 public class RedstonePlate
 {
     public static final String MODID = "redstoneplate";
-    public static final String VERSION = "0.0.4";
+    public static final String VERSION = "0.0.6";
     
     //my variables
     public static Block BlockRedstonePlate;
     public static Block BlockRspDWall;
     
     
+    
     @EventHandler
     public void init(FMLInitializationEvent event)
     {
+    	
     	
     	//block registry
     	BlockRedstonePlate = new BlockRedstonePlate();
@@ -30,14 +35,13 @@ public class RedstonePlate
     	BlockRspDWall = new BlockRspDWall();
     	GameRegistry.registerBlock(BlockRspDWall, "RspDWall");
     	
-    	
+    	//crafting registry
     	GameRegistry.addRecipe(new ItemStack(BlockRedstonePlate, 1), new Object[]{
         	"XYX",
         	"YZY",
         	"XYX",
         	'X', Items.iron_ingot , 'Y', Items.redstone , 'Z' , Blocks.stone_slab  });
     	
-    	System.out.println("Done Loading");
-    
+    	//demension registry   
     }
 }
