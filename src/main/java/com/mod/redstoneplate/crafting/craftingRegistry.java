@@ -1,12 +1,11 @@
 package com.mod.redstoneplate.crafting;
 
-import com.mod.redstoneplate.blocks.blockRegistry;
-import com.mod.redstoneplate.main.mainRegistry;
-
-import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
+
+import com.mod.redstoneplate.blocks.blockRegistry;
+
 import cpw.mods.fml.common.registry.GameRegistry;
 
 public class craftingRegistry {

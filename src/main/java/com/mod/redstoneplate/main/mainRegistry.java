@@ -31,6 +31,7 @@ public class mainRegistry
     
     public void PostLoad(FMLPostInitializationEvent PostEvent) {
     	
-    	WorldType REDSTONEPLATE = new WorldTypeRedstonePlate(3, "Redstone Plate");
+    	@SuppressWarnings("unused")
+		WorldType REDSTONEPLATE = new WorldTypeRedstonePlate(3, "Redstone Plate");
     }
 }

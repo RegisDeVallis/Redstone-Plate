@@ -22,7 +22,7 @@ public class BiomeRegistry {
 	private static void initializedBiome() {
 		// TODO Auto-generated method stub
 		
-		BiomeDictionary.registerBiomeType(biomeRedstonePlate, Type.DESERT);
+		BiomeDictionary.registerBiomeType(biomeRedstonePlate, Type.DRY);
 		
 		
 	}

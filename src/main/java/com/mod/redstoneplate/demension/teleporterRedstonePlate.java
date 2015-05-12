@@ -21,8 +21,10 @@ import com.mod.redstoneplate.blocks.blockRegistry;
 public class teleporterRedstonePlate extends Teleporter {
 	
 	private final WorldServer worldServerInstance;
+	@SuppressWarnings("unused")
 	private final Random random;
 	private final LongHashMap destinationCoordinateCache = new LongHashMap();
+	@SuppressWarnings("rawtypes")
 	private final List destinationCoordinateKeys = new ArrayList();
 
 	public teleporterRedstonePlate(WorldServer worldserver) {
@@ -65,6 +67,8 @@ public class teleporterRedstonePlate extends Teleporter {
 		}
 	}
 	
+	
+	@SuppressWarnings("unchecked")
 	public boolean placeInExistingPortal(Entity entity, double par2, double par4, double par6, float par8){
 		short short1 = 128;
 		double d3 = -1.0D;
@@ -162,6 +166,7 @@ public class teleporterRedstonePlate extends Teleporter {
 					k3 = Direction.offsetZ[k2];
 					l3 = i - j3;
 					d11 -= (double)j3;
+					@SuppressWarnings("unused")
 					int k1 = k - k3;
 					d7 -= (double)k3;
 					flag1 = !this.worldServerInstance.isAirBlock(i + l2 + j3, j, k + i3 + k3) || !this.worldServerInstance.isAirBlock(i + l2 + j3, j + 1, k + i3 + k3);

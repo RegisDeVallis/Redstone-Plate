@@ -9,6 +9,7 @@ public class blockRegistry {
     public static Block BlockRspDWall;
     
 	public static void blockRegistry(){
+		
 		BlockRedstonePlate = new BlockRedstonePlate();
     	GameRegistry.registerBlock(BlockRedstonePlate, "Redstone Plate");
     	BlockRspDWall = new BlockRspDWall();

@@ -13,9 +13,11 @@ import net.minecraftforge.common.BiomeManager.BiomeEntry;
 
 public class RedstonePlateGenLayerBiome extends GenLayer
 {
-    private List<BiomeEntry>[] biomes = new ArrayList[BiomeManager.BiomeType.values().length];
+    @SuppressWarnings("unchecked")
+	private List<BiomeEntry>[] biomes = new ArrayList[BiomeManager.BiomeType.values().length];
     
-    private static final String __OBFID = "CL_00000555";
+    @SuppressWarnings("unused")
+	private static final String __OBFID = "CL_00000555";
 
     public RedstonePlateGenLayerBiome(long p_i2122_1_, GenLayer p_i2122_3_, WorldType p_i2122_4_)
     {
